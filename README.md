@@ -1,5 +1,7 @@
 <h1>Twitter 👥🖌️
 
+<h2>🛠 Stack:
+
 <h4>
 <li>Typescript
 <li>React
