@@ -24,7 +24,7 @@ const Sidebar = () => {
     },
     {
       label: "Profile",
-      href: "/users/123",
+      href: `/users/${currentUser?.id}`,
       icon: FaUser,
       auth: true,
     },
@@ -49,6 +49,7 @@ const Sidebar = () => {
               onClick={() => signOut()}
               icon={BiLogOut}
               label="Logout"
+              href={""}
             />
           )}
           <SidebarTweetButton />

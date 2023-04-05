@@ -4,16 +4,18 @@ import { SessionProvider } from "next-auth/react";
 import "@/styles/globals.css";
 
 import IndexPage from "@/components/IndexPage";
+import EditModal from "@/components/modals/EditModal";
+import RegisterModal from "@/components/modals/RegisterModal";
 import LoginModal from "@/components/modals/LoginModal";
 import Layout from "@/components/Layout";
-import RegisterModal from "@/components/modals/RegisterModal";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <SessionProvider session={pageProps.session}>
       <Toaster />
-      <LoginModal />
+      <EditModal />
       <RegisterModal />
+      <LoginModal />
       <Layout>
         <Component {...pageProps} />
       </Layout>
