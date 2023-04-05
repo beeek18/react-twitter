@@ -141,3 +141,13 @@ body {
   disabled:opacity-70
   disabled:cursor-not-allowed;
 }
+
+.postItemIcon {
+  @apply flex 
+  flex-row 
+  items-center
+text-neutral-500
+  gap-2 
+  cursor-pointer
+  transition;
+}
