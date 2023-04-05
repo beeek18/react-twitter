@@ -1,7 +1,7 @@
 import React from "react";
 
 import useUsers from "@/hooks/useUsers";
-import Avarat from "../Avarat";
+import Avatar from "../Avatar";
 
 const FollowBar = () => {
   const { data: users = [] } = useUsers();
@@ -17,7 +17,7 @@ const FollowBar = () => {
         <div className="flex flex-col gap-6 mt-4">
           {users.map((user: Record<string, any>) => (
             <div key={user.id} className="flex flex-row gap-4">
-              <Avarat userId={user.id} />
+              <Avatar userId={user.id} />
               <div className="flex flex-col">
                 <p className="text-white font-semibold text-sm">{user.name}</p>
                 <p className="text-neutral-400  text-sm">@{user.username}</p>

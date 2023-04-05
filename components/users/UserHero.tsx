@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import useUser from "@/hooks/useUser";
-import Avarat from "../Avarat";
+import Avatar from "../Avatar";
 
 interface UserHeroProps {
   userId: string;
@@ -22,7 +22,7 @@ const UserHero: React.FC<UserHeroProps> = ({ userId }) => {
           />
         )}
         <div className="absolute -bottom-16 left-4">
-          <Avarat userId={userId} isLarge hasBorder />
+          <Avatar userId={userId} isLarge hasBorder />
         </div>
       </div>
     </div>

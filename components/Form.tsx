@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from "react";
 import axios from "axios";
+import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
 
 import useLoginModal from "@/hooks/useLoginModal";
@@ -8,8 +8,8 @@ import useCurrentUser from "@/hooks/useCurrentUser";
 import usePosts from "@/hooks/usePosts";
 import usePost from "@/hooks/usePost";
 
+import Avatar from "./Avatar";
 import Button from "./Button";
-import Avarat from "./Avarat";
 
 interface FormProps {
   placeholder: string;
@@ -37,7 +37,6 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
       await axios.post(url, { body });
 
       toast.success("Tweet created");
-
       setBody("");
       mutatePosts();
       mutatePost();
@@ -46,40 +45,49 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
     } finally {
       setIsLoading(false);
     }
-  }, [body, mutatePosts, mutatePost, isComment, postId]);
+  }, [body, mutatePosts, isComment, postId, mutatePost]);
 
   return (
     <div className="border-b-[1px] border-neutral-800 px-5 py-2">
       {currentUser ? (
         <div className="flex flex-row gap-4">
           <div>
-            <Avarat userId={currentUser?.id} />
+            <Avatar userId={currentUser?.id} />
           </div>
           <div className="w-full">
             <textarea
               disabled={isLoading}
-              onChange={(e) => setBody(e.target.value)}
+              onChange={(event) => setBody(event.target.value)}
               value={body}
               className="
-              disabled:opacity-80
-              peer
-              resize-none
-              mt-3 w-full
-            bg-black
-              ring-0 
-              outline-none
-              text-[20px]
-            placeholder-neutral-500
-            text-white
-            "
+                disabled:opacity-80
+                peer
+                resize-none 
+                mt-3 
+                w-full 
+                bg-black 
+                ring-0 
+                outline-none 
+                text-[20px] 
+                placeholder-neutral-500 
+                text-white
+              "
               placeholder={placeholder}
             ></textarea>
-            <hr className="opacity-0 peer-focus:opacity-100 h-[1px] w-full border-neutral-800 transition" />
+            <hr
+              className="
+                opacity-0 
+                peer-focus:opacity-100 
+                h-[1px] 
+                w-full 
+                border-neutral-800 
+                transition"
+            />
             <div className="mt-4 flex flex-row justify-end">
               <Button
-                label="Tweet"
                 disabled={isLoading || !body}
                 onClick={onSubmit}
+                label="Tweet"
               />
             </div>
           </div>
@@ -91,7 +99,7 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
           </h1>
           <div className="flex flex-row items-center justify-center gap-4">
             <Button label="Login" onClick={loginModal.onOpen} />
-            <Button label="Register" secondary onClick={registerModal.onOpen} />
+            <Button label="Register" onClick={registerModal.onOpen} secondary />
           </div>
         </div>
       )}

@@ -4,13 +4,13 @@ import Image from "next/image";
 
 import useUser from "@/hooks/useUser";
 
-interface AvaratProps {
+interface AvatarProps {
   userId: string;
   isLarge?: boolean;
   hasBorder?: boolean;
 }
 
-const Avarat: React.FC<AvaratProps> = ({ userId, isLarge, hasBorder }) => {
+const Avatar: React.FC<AvatarProps> = ({ userId, isLarge, hasBorder }) => {
   const { data: fetchedUser } = useUser(userId);
   const router = useRouter();
 
@@ -48,4 +48,4 @@ const Avarat: React.FC<AvaratProps> = ({ userId, isLarge, hasBorder }) => {
   );
 };
 
-export default Avarat;
+export default Avatar;
