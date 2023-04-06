@@ -9,6 +9,7 @@
 - Next.js 13
 - Tailwind
 - Prettier & Eslint
+- Prisma
   
 <h2>🛠 Features:
 <h4>
