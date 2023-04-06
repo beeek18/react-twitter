@@ -1,16 +1,26 @@
 <h1>Twitter 👥🖌️
 
 <h2>🛠 Stack:
-
 <h4>
-<li>Typescript
-<li>React
-<li>Mongo
-<li>NextAuth
-<li>Next.js 13
-<li>Users and Individual User Profile
-<li>Edit User, Image Upload
-<li>Load & Create Posts
-<li>Like & Follow Functionality
-<li>Comments
-<li>Notifications
+  
+- Typescript
+- React
+- MongoDB
+- NextAuth
+- Next.js 13
+- Tailwind
+  
+<h2>🛠 Features:
+<h4>
+
+- Authentication system
+- Notification system
+- Image Upload using Base64 strings
+- Prisma ORM with MongoDB
+- Responsive Layout
+- 1 To Many Relations (User - Post)
+- Many To Many Relations (Post - Comment)
+- Following functionality
+- Comments / Replies
+- Likes functionality
+- Vercel Deployment
