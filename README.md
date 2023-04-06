@@ -6,9 +6,9 @@
 - Typescript
 - React
 - MongoDB
-- NextAuth
 - Next.js 13
 - Tailwind
+- Prettier & Eslint
   
 <h2>🛠 Features:
 <h4>
@@ -24,3 +24,4 @@
 - Comments / Replies
 - Likes functionality
 - Vercel Deployment
+- Media
