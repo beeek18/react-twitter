@@ -6,7 +6,6 @@
 - Typescript
 - React
 - MongoDB
-- Next.js 13
+- Next.js 12 (Pages routing)
 - Tailwind
-- Prettier & Eslint
 - Prisma
